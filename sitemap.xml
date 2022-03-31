@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>http://thedatashop.club/documentation/</loc>
+         <loc>http://thedatashop.club/documentation/index.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/Datashopdashboard/</loc>
+         <loc>http://thedatashop.club/documentation/Datashopdashboard.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/installation/</loc>
+         <loc>http://thedatashop.club/documentation/installation.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/newservice/Flasktemplate/</loc>
+         <loc>http://thedatashop.club/documentation/newservice/Flasktemplate.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/newservice/builddockerimage/</loc>
+         <loc>http://thedatashop.club/documentation/newservice/builddockerimage.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/newservice/createservice/</loc>
+         <loc>http://thedatashop.club/documentation/newservice/createservice.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/newservice/deployimage/</loc>
+         <loc>http://thedatashop.club/documentation/newservice/deployimage.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/newservice/registerservice/</loc>
+         <loc>http://thedatashop.club/documentation/newservice/registerservice.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://thedatashop.club/documentation/newservice/serverlessdeployment/</loc>
+         <loc>http://thedatashop.club/documentation/newservice/serverlessdeployment.html</loc>
          <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
