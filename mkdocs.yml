@@ -1,0 +1,32 @@
+site_name: TheDataShop
+site_url: http://thedatashop.club/documentation
+nav:
+  - Introduction:
+      - Home: index.md
+      - Datashop dashboard: Datashopdashboard.md
+  - How to create datashop service:
+      - Deployment methods: newservice/createservice.md
+      - Service templates:
+          - Flask docker deployment template:
+              - step 1 - Edit service: newservice/Flasktemplate.md
+              - step 2 - Build docker image: newservice/builddockerimage.md
+              - step 3 - Deploy the image container: newservice/deployimage.md
+          - serverless deployment on AWS: newservice/serverlessdeployment.md
+      - Register service on Datashop: newservice/registerservice.md
+
+
+theme: readthedocs
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search:
+        lang: en
+  - mkdocs-video:
+        css_style:
+          width: "100%"
+          height: "500px"
+          position: "relative"
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="http://thedatashop.club/documentation/Datashopdashboard/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Datashop dashboard - TheDataShop</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Datashop dashboard";
+        var mkdocs_page_input_path = "Datashopdashboard.md";
+        var mkdocs_page_url = "/documentation/Datashopdashboard/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TheDataShop
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Datashop dashboard</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#live-dashboard">Live Dashboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#profile">Profile</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#developers">Developers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-manager">Data Manager</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#add-new-data-set">Add new data set</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#service-manager">Service Manager</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-service">create a new service</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#job-manager">Job Manager</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-job">create a new job</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How to create datashop service</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../newservice/createservice/">Deployment methods</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Service templates</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Flask docker deployment template</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../newservice/Flasktemplate/">step 1 - Edit service</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../newservice/builddockerimage/">step 2 - Build docker image</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../newservice/deployimage/">step 3 - Deploy the image container</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../newservice/serverlessdeployment/">serverless deployment on AWS</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../newservice/registerservice/">Register service on Datashop</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TheDataShop</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Introduction &raquo;</li><li>Datashop dashboard</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="datashop-dashboard">Datashop Dashboard</h1>
+<h2 id="live-dashboard">Live Dashboard</h2>
+<p>live dashboard displays stats about the jobs and services offered by the Datashop platform. It is a good way to get an overview of newly added services and recently finished jobs. it also displays recent developers added to the platform.</p>
+<p><img alt="live dashboard" src="../images/dashboard.png" width="60%" /></p>
+<h2 id="profile">Profile</h2>
+<p>Update your profile to let other users know more about yourself.</p>
+<p><img alt="profile" src="../images/profile.png" width="100%" /></p>
+<p>click on submit to save your changes.</p>
+<h2 id="developers">Developers</h2>
+<p>Developers page will display a list of all developers in the platform. You can click on the view button next developer to see their profile in detail</p>
+<h2 id="data-manager">Data Manager</h2>
+<p>In the data manager tab you can manage your data. You can add new data sets, delete data sets and also create job requests to process your data.</p>
+<h4 id="add-new-data-set">Add new data set</h4>
+<p>follow the steps below: </p>
+<ul>
+<li>click on "Upload Data"</li>
+<li>choose a file to upload</li>
+<li>give a name to the datafile</li>
+<li>a description of the datafile </li>
+</ul>
+<p>you also have an option to create new job using "Create Job" next to the datafile. </p>
+<p><img alt="datamaneger" src="../images/datamanager.png" width="100%" /></p>
+<h2 id="service-manager">Service Manager</h2>
+<p>service manager will display the list of all services in the platform. You can click on the view button next service to read about the service in detail. "developers" can also remove their services by clicking on the "delete" button next to the service. </p>
+<h4 id="create-a-new-service">create a new service</h4>
+<p>details require to create a service:</p>
+<ul>
+<li>name of the service</li>
+<li>URL link to the service</li>
+<li>A detail description of the service</li>
+<li>service cost</li>
+<li>input requirements to the access the service</li>
+</ul>
+<p><img alt="service manager" src="../images/servicemanager.png" width="100%" /></p>
+<h2 id="job-manager">Job Manager</h2>
+<p>Job manager will display the list of all jobs run by the user. You can click on the view button next job to display the job results. the "download" button will download results (current we support json/images/csv/.zip files as output).
+user can also create jobs by clicking on the "create job" button and selecting a service they like.</p>
+<h4 id="create-a-new-job">create a new job</h4>
+<p>details require to create a job:</p>
+<ul>
+<li>name of the job</li>
+<li>select a service from the list</li>
+<li>select type of input data to the service</li>
+<li>URL link to the data file ("The URL should be publicly accessible")</li>
+</ul>
+<p><img alt="job manager" src="../images/jobmanager.png" width="100%" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../newservice/createservice/" class="btn btn-neutral float-right" title="Deployment methods">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../newservice/createservice/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

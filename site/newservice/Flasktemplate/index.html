@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="http://thedatashop.club/documentation/newservice/Flasktemplate/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>step 1 - Edit service - TheDataShop</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "step 1 - Edit service";
+        var mkdocs_page_input_path = "newservice\\Flasktemplate.md";
+        var mkdocs_page_url = "/documentation/newservice/Flasktemplate/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> TheDataShop
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Datashopdashboard/">Datashop dashboard</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How to create datashop service</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../createservice/">Deployment methods</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Service templates</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Flask docker deployment template</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">step 1 - Edit service</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#clone-the-template">Clone the template</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#template-sturcture">Template sturcture</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#prepare-your-model">Prepare your model</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#write-your-inference-script">Write your Inference script</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#handle-multiple-results">Handle multiple results</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#test-your-model">Test your model</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../builddockerimage/">step 2 - Build docker image</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../deployimage/">step 3 - Deploy the image container</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../serverlessdeployment/">serverless deployment on AWS</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../registerservice/">Register service on Datashop</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TheDataShop</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>How to create datashop service &raquo;</li>
+          <li>Service templates &raquo;</li>
+          <li>Flask docker deployment template &raquo;</li><li>step 1 - Edit service</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="deploying-an-ml-service-using-flask-and-docker-for-datashop">Deploying an ML Service using Flask and docker for datashop</h1>
+<p>to begin with we recommend you watch our video tutorial on Part 1</p>
+<p><div class="video-container"><iframe src="../../video/Datashop%20tutorial%20part-1.mp4" style="width: 100%; height: 500px; position: relative" frameborder="0" allowfullscreen></iframe></div></p>
+<p>Software requirements:</p>
+<ul>
+<li>docker</li>
+<li>python 3.+</li>
+</ul>
+<h5 id="clone-the-template">Clone the template</h5>
+<p>click the following link <a href="https://github.com/manaspalaparthi/service-template.git">service template</a> and clone the repository to your local machine</p>
+<pre><code>git clone https://github.com/manaspalaparthi/service-template.git
+</code></pre>
+<h3 id="template-sturcture">Template sturcture</h3>
+<pre><code>service-template
+├── Datashop
+│   ├── __init__.py
+│   ├── preprocess.py
+│   ├── postproces.py
+│   └── backend.py
+├── app.py
+├── main.py
+├── service.py
+├── requirements.txt
+└── model
+    ├── __init__.py
+    └── model.py
+</code></pre>
+<p><strong>Out of all the files in the template, only the following files are required to be modified:</strong></p>
+<ul>
+<li>main.py (update job status)</li>
+<li>service.py (actual service itself)</li>
+</ul>
+<h3 id="prepare-your-model">Prepare your model</h3>
+<ol>
+<li>Create a new directory in the service-template repository called model if not exists</li>
+<li>copy your model file to the model directory</li>
+<li>create a <strong>init</strong>.py file in the model directory if not exists</li>
+<li>Initalize your model in <strong>init</strong>.py file as shown below</li>
+</ol>
+<p>example model / <strong>init</strong>.py file :</p>
+<pre><code class="language-angular2html">import tensorflow as tf
+
+# load model
+try:
+    model = tf.keras.models.load_model(&quot;model/EfficientNetB0/&quot;)
+    print(&quot;Model loaded&quot;)
+except:
+    print(&quot;Model not found&quot;)
+
+</code></pre>
+<h3 id="write-your-inference-script">Write your Inference script</h3>
+<p>To write your inference script, please use service.py file from the root folder of the service-template repository.</p>
+<p>all the code you write in service.py file will be executed when the service is called.</p>
+<p>user input data such as images/ csv / json are saved in "tmp" folder of the service-template repository.</p>
+<p>read the documentation of "service.run" function to know how to read the data from the "tmp" folder.</p>
+<pre><code>title:: 
+  run
+    description:: 
+    Run the model/get the predictions according the service.
+inputs::
+  jobID 
+        Job ID from datashop application used for search file or save file
+returns::
+  insightsDataFileLocation
+
+load data from temp folder
+    &gt;  json data is data.json
+    &gt;  all images and CSV are named with jobID_"filetype"
+    &gt;  jobiD_csv.csv   "61ef72ed396fc5330c15f250_csv.csv"
+    &gt;  jobiD_image.png   "61ef72ed396fc5330c15f250_image.png"
+</code></pre>
+<p>to read the data you can use the following code:</p>
+<pre><code># reading images with file name jobID-image.png or jobID-image.jpg or jobID-image.jpeg
+# 61ef72ed396fc5330c15f250_image.png or 61ef72ed396fc5330c15f250_image.jpg or 61ef72ed396fc5330c15f250_image.jpeg (inspecific)
+fileslist = glob.glob(os.getcwd()+"/tmp/"+jobID+"-image"+"*")
+</code></pre>
+<p>Sample run function:</p>
+<p>in this example we are searching for image files in tmp folder with the job-ID and performing inference on the image.</p>
+<pre><code class="language-angular2html">
+def run(jobID):
+  print(&quot;************************ \n\n excuting jobID:&quot;+ str(jobID)+&quot; \n\n\n&quot;)
+  &quot;&quot;&quot;
+  title:: 
+      run
+  description:: 
+      Run the model/get the predictions according the service.
+  inputs::
+      jobID 
+            Job ID from datashop application used for search file or save file
+
+  returns::
+      insightsDataFileLocation
+
+
+  load data from temp folder
+    &gt;  json data is data.json
+    &gt;  all images and CSV are named with jobID_&quot;filetype&quot;
+    &gt;  jobiD_csv.csv   &quot;61ef72ed396fc5330c15f250_csv.csv&quot;
+    &gt;  jobiD_image.png   &quot;61ef72ed396fc5330c15f250_image.png&quot;
+  &quot;&quot;&quot;
+
+  fileslist = glob.glob(os.getcwd()+&quot;/tmp/&quot;+jobID+&quot;-image&quot;+&quot;*&quot;)
+
+  #load image as numpy array
+  img = cv2.imread(fileslist[0])
+  img = cv2.resize(img, (224, 224))
+  img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+  img = np.expand_dims(img, axis=0)
+  result  = model.predict(img)
+
+  if result[0][0] &gt; 0.5:
+    result = {
+      &quot;Autistic&quot;: &quot;Positive&quot;,
+      &quot;confidence&quot;:str(result[0][0])
+    }
+
+  else:
+    result = {
+      &quot;Autistic&quot;: &quot;Negative&quot;,
+      &quot;confidence&quot;: str(result[0][0])
+    }
+  print(&quot;model inference finished!&quot;, str(result))
+
+  return [result]
+
+</code></pre>
+<p>Translate your model results into insights by converting them to Json / image / csv / graphs and return them as a list.  </p>
+<p>we support multiple insights as a list. (<strong>Json is default on 0th location of the list</strong>)</p>
+<h3 id="handle-multiple-results">Handle multiple results</h3>
+<pre><code>(comming soon)
+</code></pre>
+<h3 id="test-your-model">Test your model</h3>
+<p>To test the service, please run </p>
+<pre><code>python app.py
+</code></pre>
+<p>The service will be up and running on "http://localhost:5000/predict" or "http://127.0.0.1:5000/predict"</p>
+<p>we have provided a sample payload for the service in the root folder of the service-template repository. Use <a href="https://www.getpostman.com/">Postman</a> to test the service as shown in the video.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../createservice/" class="btn btn-neutral float-left" title="Deployment methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../builddockerimage/" class="btn btn-neutral float-right" title="step 2 - Build docker image">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../createservice/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../builddockerimage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
